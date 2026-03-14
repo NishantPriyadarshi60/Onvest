@@ -1,0 +1,29 @@
+{
+  "name": "webhooks",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@onvest/config": "*",
+    "jose": "^6.2.1",
+    "@onvest/db": "*",
+    "@onvest/email": "*",
+    "@supabase/supabase-js": "^2.99.0",
+    "express": "^4.21.0",
+    "merge-descriptors": "^1.0.3",
+    "resend": "^6.9.0",
+    "stripe": "^20.4.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.9.0"
+  }
+}

@@ -29,7 +29,7 @@ TARGET USER: General Partners (GPs) who raise capital under US Reg D Rule 506b/5
 
 ARCHITECTURE (mandatory):
 - Monorepo (pnpm workspaces + Turborepo). Frontend and API live in apps/web (Next.js). Webhooks run in a separate app.
-- apps/web: Next.js 14 App Router (pages + API route handlers). Frontend talks to backend only via HTTP (REST). No direct DB or secrets in client code; use packages for shared code.
+- apps/web: Next.js 16 App Router (pages + API route handlers). Frontend talks to backend only via HTTP (REST). No direct DB or secrets in client code; use packages for shared code.
 - Shared packages: types (DTOs, ApiResponse, enums), config (env validation), db (Supabase client, queries, migrations, DB types), email (React Email templates).
 - apps/webhooks: Express app for Persona, DocuSign, Stripe webhooks only. Uses packages/db, packages/config, packages/email.
 - apps/blockchain: Hardhat project for ERC-3643 contracts (separate from Next.js).

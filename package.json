@@ -1,0 +1,28 @@
+{
+  "name": "onvest",
+  "private": true,
+  "packageManager": "npm@10.8.2",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "test": "npm run test -w web",
+    "test:e2e": "npm run test:e2e -w web",
+    "dev:web": "npm run dev --workspace=web",
+    "dev:webhooks": "npm run dev --workspace=webhooks",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "db:migrate:onvest": "node scripts/run-onvest-migrate.mjs"
+  },
+  "devDependencies": {
+    "dotenv": "^17.3.1",
+    "pg": "^8.20.0",
+    "turbo": "^2.3.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}
